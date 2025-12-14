@@ -147,7 +147,9 @@ function App() {
           max={6}
           step={1}
           onValueChange={(e) => {
-            if (e.value !== null) setDuration(e.value);
+            if (typeof e.value === 'number') {
+              setDuration(e.value);
+            }
           }}
         />
         <Button
