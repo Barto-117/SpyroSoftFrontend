@@ -33,7 +33,7 @@ function App() {
       const from = formatDate(today);
       const to = formatDate(twoDaysLater);
 
-      const response = await fetch(`http://localhost:8080/${from}/${to}`);
+      const response = await fetch(`https://spyrosoftbackend.onrender.com/${from}/${to}`);
       const data = await response.json();
       setEnergyData(data);
     } catch (err) {
@@ -60,7 +60,7 @@ function App() {
       const from = formatDate(today);
       const to = formatDate(twoDaysLater);
 
-      const response = await fetch(`http://localhost:8080/${from}/${to}/${duration}`);
+      const response = await fetch(`https://spyrosoftbackend.onrender.com/${from}/${to}/${duration}`);
       const data = await response.json();
       setChargingWindow(data);
     } catch (err) {
